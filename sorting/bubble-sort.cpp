@@ -6,7 +6,7 @@ void swap(int *, int *);
 
 void printArray(int arr[], int);
 
-int *selectionSort(int *, int);
+int *bubbleSort(int *, int);
 
 int main()
 {
@@ -25,26 +25,22 @@ int main()
 
   int *sortedArray;
 
-  sortedArray = selectionSort(arr, lengthOfArray);
+  sortedArray = bubbleSort(arr, lengthOfArray);
   printArray(sortedArray, lengthOfArray);
   return 0;
 }
 
-int *selectionSort(int *arr, int length)
+int *bubbleSort(int *arr, int length)
 {
   for (int i = 0; i < length; i++)
   {
-    int min = arr[i];
-    int index = i;
-    for (int j = i; j < length; j++)
+    for (int j = 0; j < length - i; j++)
     {
-      if (min > arr[j])
+      if (arr[j] > arr[j + 1])
       {
-        min = arr[j];
-        index = j;
+        swap(&arr[j + 1], &arr[j]);
       }
     }
-    swap(&arr[i], &arr[index]);
     printArray(arr, length);
   }
   return arr;

@@ -13,3 +13,5 @@
 - Merge Sort
 
 - Selection Sort
+
+- Bubble Sort
