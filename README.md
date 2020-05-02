@@ -29,3 +29,5 @@
 - Circular queue using class
 
 - Priority queue using class
+
+- Linked List
