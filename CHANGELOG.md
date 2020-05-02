@@ -13,3 +13,5 @@
 ### Queue using array [02 May, 2020]
 
 ### Deque using class [03 May, 2020]
+
+### Circular queue using class [03 May, 2020]
