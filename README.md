@@ -26,4 +26,6 @@
 
 - Deque using class
 
-- Circular queue using class [03 May, 2020]
+- Circular queue using class
+
+- Priority queue using class
