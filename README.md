@@ -23,3 +23,5 @@
 - Counting Sort
 
 - Queue using array
+
+- Deque using class
