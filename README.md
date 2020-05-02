@@ -17,3 +17,9 @@
 - Bubble Sort
 
 - Insertion Sort
+
+- Quick Sort
+
+- Counting Sort
+
+- Queue using array
