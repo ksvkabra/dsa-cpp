@@ -21,3 +21,5 @@
 ### Linked List [03 May, 2020]
 
 ### Linked List - Stack [04 May, 2020]
+
+### Doubly Linked List [04 May, 2020]

@@ -33,3 +33,5 @@
 - Linked List
 
 - Linked List - stack
+
+- Doubly Linked List
