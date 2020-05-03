@@ -31,3 +31,5 @@
 - Priority queue using class
 
 - Linked List
+
+- Linked List - stack
