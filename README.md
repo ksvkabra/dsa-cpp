@@ -37,3 +37,5 @@
 - Doubly Linked List
 
 - Deque Doubly Linked List
+
+- Circular Queue Linked List
