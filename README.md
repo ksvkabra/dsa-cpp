@@ -35,3 +35,5 @@
 - Linked List - stack
 
 - Doubly Linked List
+
+- Deque Doubly Linked List

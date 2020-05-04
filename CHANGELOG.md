@@ -23,3 +23,5 @@
 ### Linked List - Stack [04 May, 2020]
 
 ### Doubly Linked List [04 May, 2020]
+
+### Deque - Doubly Linked List [05 May, 2020]
