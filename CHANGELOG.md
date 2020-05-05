@@ -28,6 +28,8 @@
 
 ### Circular Queue Linked List [05 May, 2020]
 
+### WIP Binary Search Tree [06 May, 2020]
+
 ### Graph Adjacency List Implemented [09 May, 2020]
 
 ### Radix Sort implemented [10 May, 2020]

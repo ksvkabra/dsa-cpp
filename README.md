@@ -53,3 +53,5 @@
 - Array left rotation
 
 - Array Rotation - reversal algorithm
+
+- WIP - Binary Search Tree
