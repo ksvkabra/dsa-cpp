@@ -39,3 +39,5 @@
 - Deque Doubly Linked List
 
 - Circular Queue Linked List
+
+- WIP - Binary Search Tree

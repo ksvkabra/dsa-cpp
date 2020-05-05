@@ -27,3 +27,5 @@
 ### Deque - Doubly Linked List [05 May, 2020]
 
 ### Circular Queue Linked List [05 May, 2020]
+
+### WIP Binary Search Tree [06 May, 2020]
