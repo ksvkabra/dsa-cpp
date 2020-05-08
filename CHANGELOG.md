@@ -27,3 +27,5 @@
 ### Deque - Doubly Linked List [05 May, 2020]
 
 ### Circular Queue Linked List [05 May, 2020]
+
+### Graph Adjacency List Implemented [09 May, 2020]
