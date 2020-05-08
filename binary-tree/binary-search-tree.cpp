@@ -22,6 +22,7 @@ public:
   void addNode(int item);
   void deleteNode(node *);
   void printNode();
+  void inOrderTraversalWithoutrecursion();
   void inOrderTraversal(node *);
   void preOrderTraversal(node *);
   void postOrderTraversal(node *);
@@ -43,6 +44,7 @@ int main()
   newTree.addNode(32);
   newTree.addNode(1);
   newTree.printNode();
+  newTree.inOrderTraversalWithoutrecursion();
   return 0;
 }
 
@@ -108,11 +110,45 @@ void BinarySearchTree::inOrderTraversal(node *temp)
 
   inOrderTraversal(temp->left);
 
-  cout << temp->data << " " << endl;
+  cout << temp << " " << temp->data << " " << endl;
 
   inOrderTraversal(temp->right);
 }
 
+void BinarySearchTree::inOrderTraversalWithoutrecursion()
+{
+  if (root == NULL)
+  {
+    cout << "--asd--";
+    return;
+  }
+  node *temp = root;
+  node *parent = NULL;
+  vector<node *> stackOfNodes;
+  stackOfNodes.push_back(temp);
+  int countStackSize = 1;
+  temp = temp->left;
+  while (temp != NULL || stackOfNodes.size() > 0)
+  {
+    if (temp == NULL)
+    {
+      temp = stackOfNodes[countStackSize - 1];
+      stackOfNodes.pop_back();
+      cout << temp << " data " << temp->data << endl;
+      cout << parent << " parent " << parent->data << endl;
+      countStackSize--;
+      parent = temp;
+      temp = temp->right;
+    }
+    else
+    {
+      stackOfNodes.push_back(temp);
+      countStackSize++;
+      parent = temp;
+      temp = temp->left;
+    }
+  }
+}
 void BinarySearchTree::postOrderTraversal(node *temp)
 {
 }
