@@ -57,7 +57,7 @@ void countingSort(int arr[], int length)
   }
 
   int result[length];
-  for (int i = 0; i < length; i++)
+  for (int i = length - 1; i >= 0; i--)
   {
     result[intermediateCountArray[arr[i]] - 1] = arr[i];
     --intermediateCountArray[arr[i]];
