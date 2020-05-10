@@ -31,3 +31,5 @@
 ### Graph Adjacency List Implemented [09 May, 2020]
 
 ### Radix Sort implemented [10 May, 2020]
+
+### Bucket Sort implemented [10 May, 2020]
