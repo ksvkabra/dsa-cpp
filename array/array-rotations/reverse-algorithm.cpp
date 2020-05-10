@@ -25,9 +25,11 @@ void rotate(vector<int> &arr, int size, int rotations)
 
 void reverse(vector<int> &arr, int start, int end)
 {
-  for (int i = start; i <= (start + end) / 2; i++)
+  while (start < end)
   {
-    swap(&arr[i], &arr[end + start - i]);
+    swap(&arr[start], &arr[end]);
+    start++;
+    end--;
   }
 }
 
