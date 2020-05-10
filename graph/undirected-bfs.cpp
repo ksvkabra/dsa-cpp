@@ -9,7 +9,7 @@ struct node
 {
   int data;
   int index;
-  vector<node *> list;
+  vector<node *> adjacencyList;
 };
 class GraphAdjacencyList
 {
@@ -69,9 +69,9 @@ void GraphAdjacencyList::addEdge(int u, int v)
   if (y != z)
   {
 
-    y->list.push_back(z);
+    y->adjacencyList.push_back(z);
   }
-  z->list.push_back(y);
+  z->adjacencyList.push_back(y);
 }
 
 void GraphAdjacencyList::printNodes()
@@ -89,7 +89,7 @@ void GraphAdjacencyList::printEdges()
   cout << "edges" << endl;
   for (node *x : nodes)
   {
-    for (node *y : x->list)
+    for (node *y : x->adjacencyList)
     {
       cout << x->data << "->" << y->data << " ";
     }
@@ -112,7 +112,7 @@ void GraphAdjacencyList::bfs()
     queue.pop_front();
     cout << s->data;
 
-    for (node *i : s->list)
+    for (node *i : s->adjacencyList)
     {
       if (!visited[i->index])
       {
