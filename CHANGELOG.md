@@ -39,3 +39,5 @@
 ### DFS - undirected graph [11 May, 2020]
 
 ### Array Left Rotation [11 may, 2020]
+
+### Array Rotation - reversal algorithm [11 may, 2020]

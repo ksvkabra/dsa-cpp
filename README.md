@@ -51,3 +51,5 @@
 - DFS - undirected Graph
 
 - Array left rotation
+
+- Array Rotation - reversal algorithm
