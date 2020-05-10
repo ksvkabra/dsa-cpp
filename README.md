@@ -47,3 +47,5 @@
 - Bucket Sort
 
 - BFS - undirected Graph
+
+- DFS - undirected Graph
