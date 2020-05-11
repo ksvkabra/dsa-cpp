@@ -1,6 +1,6 @@
 #include <iostream>
 #include <vector>
-#include <cmath>
+#include <queue>
 
 using namespace std;
 
@@ -9,15 +9,19 @@ struct node
   int data;
   node *left;
   node *right;
+
+  node(int item)
+  {
+    data = item;
+    left = NULL;
+    right = NULL;
+  }
 };
 
 class BinaryTree
 {
 private:
-  int treeHeight;
   node *root;
-  node *last;
-  int numberOfNodes;
 
 public:
   BinaryTree(/* args */);
@@ -29,6 +33,8 @@ public:
   void inOrderTraversal(node *);
   void postOrderTraversal();
   void printTree();
+  void deleteNode(int value);
+  void deleteDeepest(node *);
 };
 
 int main()
@@ -43,6 +49,13 @@ int main()
   obj.printTree();
 
   obj.insert(4);
+  obj.insert(5);
+  obj.insert(6);
+  obj.insert(7);
+  obj.insert(8);
+  obj.insert(9);
+  obj.printTree();
+  obj.deleteNode(4);
   obj.printTree();
   return 0;
 }
@@ -50,9 +63,6 @@ int main()
 BinaryTree::BinaryTree(/* args */)
 {
   root = NULL;
-  last = NULL;
-  treeHeight = 0;
-  numberOfNodes = 0;
 }
 
 BinaryTree::~BinaryTree()
@@ -61,7 +71,7 @@ BinaryTree::~BinaryTree()
 
 void BinaryTree::printTree()
 {
-  cout << "elements";
+  cout << "elements" << endl;
   inOrderTraversal(root);
   cout << endl;
 }
@@ -73,69 +83,115 @@ void BinaryTree::inOrderTraversal(node *temp)
     return;
   }
   inOrderTraversal(temp->left);
-
-  cout << temp << " " << temp->data << endl;
-
+  cout << temp->data << endl;
   inOrderTraversal(temp->right);
 }
 
 void BinaryTree::insert(int item)
 {
-  node *newNode = new node();
-  newNode->data = item;
-  newNode->left = NULL;
-  newNode->right = NULL;
-  if (root == NULL)
+  node *newNode = new node(item);
+  if (!root)
   {
     root = newNode;
-    numberOfNodes++;
-    treeHeight = ceil(sqrt(numberOfNodes));
     return;
   }
   node *temp = root;
-  node *parent = NULL;
-  vector<node *> stackOfNodes;
-  stackOfNodes.push_back(temp);
-  int countStackSize = 1;
-  temp = temp->left;
-  while (temp != NULL || stackOfNodes.size() > 0)
+  queue<node *> q;
+  q.push(temp);
+
+  while (!q.empty())
   {
-    if (temp == NULL)
+    temp = q.front();
+    q.pop();
+    if (!temp->left)
     {
-      temp = stackOfNodes[countStackSize - 1];
-      stackOfNodes.pop_back();
-      countStackSize--;
-      parent = temp;
-      temp = temp->right;
+      temp->left = newNode;
+      q.pop();
+      break;
     }
     else
     {
-      stackOfNodes.push_back(temp);
-      countStackSize++;
-      parent = temp;
-      temp = temp->left;
+      q.push(temp->left);
     }
-  }
-  cout << sqrt(numberOfNodes) << " " << treeHeight << "- item = " << item << endl;
-  if (sqrt(numberOfNodes) == treeHeight)
-  {
-    cout << "enter" << endl;
-    temp = root;
-    parent = NULL;
-    while (temp != NULL)
+
+    if (!temp->right)
     {
-      parent = temp;
-      temp = temp->left;
+      temp->right = newNode;
+      break;
+    }
+    else
+    {
+      q.push(temp->right);
     }
   }
-  if (parent->left != NULL)
+}
+
+void BinaryTree::deleteNode(int value)
+{
+  node *temp = root;
+  queue<node *> q;
+  q.push(temp);
+
+  node *key_node = NULL;
+
+  while (!q.empty())
   {
-    parent->right = newNode;
+    temp = q.front();
+    q.pop();
+
+    if (temp->data == value)
+    {
+      key_node = temp;
+    }
+
+    if (temp->left)
+    {
+      q.push(temp->left);
+    }
+
+    if (temp->right)
+    {
+      q.push(temp->right);
+    }
   }
-  else
+  if (key_node)
   {
-    parent->left = newNode;
+    int x = temp->data;
+    deleteDeepest(temp);
+    key_node->data = x;
   }
-  numberOfNodes++;
-  treeHeight = ceil(sqrt(numberOfNodes));
+}
+
+void BinaryTree::deleteDeepest(node *lastNode)
+{
+  queue<node *> q;
+  node *temp = root;
+  q.push(temp);
+  while (!q.empty())
+  {
+    temp = q.front();
+    q.pop();
+    if (temp->right == lastNode)
+    {
+      temp->right = NULL;
+      delete (lastNode);
+      return;
+    }
+
+    if (temp->left == lastNode)
+    {
+      temp->left = NULL;
+      delete (lastNode);
+      return;
+    }
+
+    if (temp->right)
+    {
+      q.push(temp->right);
+    }
+    if (temp->left)
+    {
+      q.push(temp->left);
+    }
+  }
 }

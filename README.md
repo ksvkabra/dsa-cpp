@@ -41,3 +41,5 @@
 - Circular Queue Linked List
 
 - WIP - Binary Search Tree
+
+- Binary Tree
