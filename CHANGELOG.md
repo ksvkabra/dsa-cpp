@@ -45,3 +45,5 @@
 ### Array Rotation - reversal algorithm [11 may, 2020]
 
 ### Binary Tree [12 May, 2020]
+
+### Traversing in Binary Tree [12 May, 2020]

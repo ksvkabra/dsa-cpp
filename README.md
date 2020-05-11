@@ -57,3 +57,5 @@
 - WIP - Binary Search Tree
 
 - Binary Tree
+
+- Binary Tree Traversing
