@@ -43,3 +43,5 @@
 ### Array Left Rotation [11 may, 2020]
 
 ### Array Rotation - reversal algorithm [11 may, 2020]
+
+### Binary Tree [12 May, 2020]
