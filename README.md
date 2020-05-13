@@ -54,7 +54,7 @@
 
 - Array Rotation - reversal algorithm
 
-- WIP - Binary Search Tree
+- Binary Search Tree
 
 - Binary Tree
 
