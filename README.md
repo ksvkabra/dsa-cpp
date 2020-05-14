@@ -59,3 +59,5 @@
 - Binary Tree
 
 - Binary Tree Traversing
+
+- Heap

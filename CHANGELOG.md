@@ -47,3 +47,5 @@
 ### Traversing in Binary Tree [12 May, 2020]
 
 ### Binary Search Tree [13 May, 2020]
+
+### Heap [14 May, 2020]
