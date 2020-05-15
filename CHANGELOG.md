@@ -49,3 +49,5 @@
 ### Binary Search Tree [13 May, 2020]
 
 ### Heap [14 May, 2020]
+
+### HeapSort [16 May, 2020]

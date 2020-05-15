@@ -61,3 +61,5 @@
 - Binary Tree Traversing
 
 - Heap
+
+- HeapSort
