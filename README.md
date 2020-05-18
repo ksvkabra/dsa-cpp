@@ -67,3 +67,5 @@
 - Naive Pattern Matching
 
 - kmp
+
+- Rabin Karp Pattern Matching algorithm
