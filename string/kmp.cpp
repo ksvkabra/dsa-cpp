@@ -19,7 +19,7 @@ void printArray(vector<int> arr)
 
 int main()
 {
-  kmp("ABABDABACDABABCABAB", "A");
+  kmp("ABABDABACDABABCABAB", "ABABCABAB");
   return 0;
 }
 
@@ -36,6 +36,7 @@ void kmp(string str, string pattern)
 
   while (i < n)
   {
+    cout << pattern[j] << "  " << str[i] << " j  " << j << " i " << i << endl;
     if (pattern[j] == str[i])
     {
       i++;
