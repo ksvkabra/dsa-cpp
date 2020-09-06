@@ -3,6 +3,15 @@
 
 using namespace std;
 
+void printVectorOneDimensional(vector<int> arr)
+{
+  for (int i : arr)
+  {
+    cout << i << " ";
+  }
+  cout << endl;
+}
+
 int main()
 {
   vector<int> arr[4];
@@ -24,5 +33,12 @@ int main()
     }
     cout << endl;
   }
+
+  vector<int> arrNew(4);
+  arrNew.resize(3);
+  arrNew.insert(arrNew.begin() + 1, 4);
+  printVectorOneDimensional(arrNew);
+  arrNew.clear();
+  printVectorOneDimensional(arrNew);
   return 0;
 }
