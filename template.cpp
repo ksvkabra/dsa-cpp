@@ -11,6 +11,8 @@
 #include <unordered_map>
 #include <iomanip>
 #include <algorithm>
+#include <numeric>
+#include <functional>
 
 using namespace std;
 
