@@ -56,4 +56,16 @@
 
 ### kmp [18 May, 2020]
 
-### Rabin Karp pattern matching [18 May, 2020]
+### Dynamic Programming using 0-1 Knapsack
+
+### Unbounded Knapsack
+
+### LCS
+
+### Longest common sustring
+
+### sets based problems resembling to knapsack
+
+### Matrix chain multiplication
+
+### cpp stl containers and algorithm library
