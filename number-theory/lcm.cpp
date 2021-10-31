@@ -45,6 +45,16 @@ int gcdOfArray(vector<int> arr)
   }
   return result;
 }
+int greaterVal(vector<int> arr)
+{
+  int result = arr[0];
+  for (int i = 1; i < arr.size(); i++)
+  {
+    result = gcd(result, arr[i]);
+  }
+  return result;
+}
+
 int main()
 {
   int a = 3;
