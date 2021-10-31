@@ -10,10 +10,11 @@ using namespace std;
 
 void rabinKarp(string, string, int);
 
+// main function starts here
 int main()
 {
   int prime = 101;
-  rabinKarp("ABABDABACDABABCABAB", "ABABCABAB", prime);
+  rabinKarp("ABABDABACDABABCABAB", "ABABCABABAB", prime);
   return 0;
 }
 
